@@ -22,13 +22,16 @@ function moduloThree(numbersZeroToInput) {
 
 function replaceNumbersContainingOnes(numbersZeroToInput) {
   var numbersContainingOnesNowBoop = [];
+
   numbersZeroToInput.forEach(function (number) {
-    if (number % 10 === 1) {
-      numbersContainingOnesNowBoop.push("Boop!");
-    } else if (parseInt(number.toExponential()) === 1) {
-      numbersContainingOnesNowBoop.push("Boop!");
-    } else {
-      numbersContainingOnesNowBoop.push(number);
+    var numberAsString = number.toString();
+
+    for (var digit = 0; digit < numberAsString.length; digit++) {
+      if (parseInt(numberAsString.charAt(digit)) === 1) {
+        numbersContainingOnesNowBoop.push("Boop!");
+      } else {
+        numbersContainingOnesNowBoop.push(number);
+      }
     }
   });
   return numbersContainingOnesNowBoop;
