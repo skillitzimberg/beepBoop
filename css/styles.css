@@ -21,6 +21,10 @@ header h1 {
   text-align: center;
 }
 
+.hide {
+  display: none;
+}
+
 #display {
   margin-top: 2em;
 }

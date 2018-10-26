@@ -15,13 +15,28 @@
         <h1>Beep boop, Dave, beep boop.</h1>
       </header>
 
-      <form class="" id="userInput">
+      <form class="hide" id="userInput">
         <div class="form-group">
           <label for="entry">Enter a number: </label>
           <input type="text" id="entry" placeholder="Test me, Dave.">
         </div>
 
+        <div class="form-group hide">
+          <label for="name">Enter your name: </label>
+          <input type="text" id="name" placeholder="Have we met?">
+        </div>
+
         <button type="submit" class="btn btn-lg btn-success">My god . . . it's full of beeps.</button>
+      </form>
+
+      <form id="userChoices">
+        <div class="form-group">
+          <p>Beep Boop will count to a number that you give it with some silliness along the way. If you would like to add to the silliness make a few choices below. Otherwise, just hit Go!</p>
+          <label for="entry">Use my name:</label>
+          <input type="checkbox" name="choice" value="name">
+        </div>
+
+        <button type="submit" class="btn btn-lg btn-primary">Go!</button>
       </form>
 
       <div id="outputToScreen" >

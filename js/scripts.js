@@ -88,4 +88,31 @@ $(document).ready(function() {
     var rawResults = beepBoop(numberEntered);
     display(rawResults);
   });
+
+  function getCheckboxValues() {
+    var checkboxValues = [];
+      $("input:checkbox[name=userChoices]:checked").each(function() {
+        var checkboxValue = $(this).val();
+        checkboxValues.push(checkboxValue);
+      });
+      return checkboxValues;
+  };
+
+  function displayCheckboxValues(checkedBoxesArray) {
+    $("#results").text(checkedBoxesArray);
+      console.log('got here');
+      console.log('checkedBoxesArray');
+      debugger;
+    $(".displayResults").toggle();
+  };
+
+    $("form#surveyForm").submit(function(event) {
+      event.preventDefault();
+
+      var surveyValues = getCheckboxValues();
+      // console.log(surveyValues);
+      displayCheckboxValues(surveyValues);
+
+    });
+
 });
