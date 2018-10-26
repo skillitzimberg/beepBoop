@@ -11,7 +11,6 @@ function returnNumbers(numericalInput) {
       numbersZeroToInput.push(count);
     }
   }
-
   return numbersZeroToInput;
 };
 

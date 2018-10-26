@@ -39,18 +39,18 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 
 - [x] Logic is broken down into "plain English" specs, listed in README.
 
-- [ ] Project is in a presentable, portfolio-quality state.
+- [ugh] Project is in a presentable, portfolio-quality state.
 
 - [x] Required functionality is in place by Friday deadline.
 
-- [ ] Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
+- [x] Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 - [x] Application implements a loop and works as expected.
 
 ## Setup/Installation Requirements
 View the project at (GitHub Pages)[].
 
-View the code at (GitHub)[].
+View the code at [GitHub](https://github.com/skillitzimberg/beepBoop).
 
 ## Known Bugs
 replaceNumbersContainingZeros(numbersContainingOnesNowBoop) not working.
