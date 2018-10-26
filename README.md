@@ -29,15 +29,15 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 
 ## Objectives
 
-- [ ] JavaScript business logic and user interface logic are separate.
+- [x] JavaScript business logic and user interface logic are separate.
 
-- [ ] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
+- [x] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
 
-- [ ] Code is clean, well-refactored, and easy-to-read. This includes correct indentation, spacing, and including only necessary comments and debugging tools.
+- [x] Code is clean, well-refactored, and easy-to-read. This includes correct indentation, spacing, and including only necessary comments and debugging tools.
 
-- [ ] All previous objectives have been met.
+- [x] All previous objectives have been met.
 
-- [ ] Logic is broken down into "plain English" specs, listed in README.
+- [x] Logic is broken down into "plain English" specs, listed in README.
 
 - [ ] Project is in a presentable, portfolio-quality state.
 
@@ -45,7 +45,7 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 
 - [ ] Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
-- [ ] Application implements a loop and works as expected.
+- [x] Application implements a loop and works as expected.
 
 ## Setup/Installation Requirements
 View the project at (GitHub Pages)[].

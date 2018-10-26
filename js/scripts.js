@@ -1,11 +1,21 @@
 // BUSINESS LOGIC
+
 function returnNumbers(numericalInput) {
   var numbersZeroToInput = [];
-  for (var count = 0; count <= numericalInput; count++) {
-    numbersZeroToInput.push(count);
+  if (numericalInput < 0) {
+    for (var count = 0; count >= numericalInput; count--) {
+      numbersZeroToInput.push(count);
+    }
+  } else {
+    for (var count = 0; count <= numericalInput; count++) {
+      numbersZeroToInput.push(count);
+    }
   }
+
   return numbersZeroToInput;
 };
+
+
 
 function moduloThree(numbersZeroToInput) {
   var numbersModuloThreeReplaced = [];
@@ -19,13 +29,12 @@ function moduloThree(numbersZeroToInput) {
   return numbersModuloThreeReplaced;
 };
 
+
+
 function replaceNumbersContainingOnes(numbersModuloThreeReplaced) {
-
   var numbersContainingOnesNowBoop = [];
-
   numbersModuloThreeReplaced.forEach(function(number) {
     var numberAsString = number.toString();
-
     if (numberAsString.includes("1") === true) {
       numbersContainingOnesNowBoop.push("Boop!");
     } else {
@@ -35,21 +44,22 @@ function replaceNumbersContainingOnes(numbersModuloThreeReplaced) {
   return numbersContainingOnesNowBoop;
 };
 
+
+
 function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
   var numbersContainingZerosNowBeep = [];
-
   numbersContainingOnesNowBoop.forEach(function(number) {
     var numberAsString = number.toString();
-
     if (numberAsString.includes("0") === true) {
       numbersContainingZerosNowBeep.push("Beep!");
     } else {
       numbersContainingZerosNowBeep.push(number);
     }
   });
-  debugger;
   return numbersContainingZerosNowBeep;
 };
+
+
 
 function beepBoop(numericalInput) {
   var numbersZeroToInput = returnNumbers(numericalInput);
@@ -64,10 +74,17 @@ function beepBoop(numericalInput) {
 
 //USER INTERFACE LOGIC
 
-$(document).ready(function() {
-  $("form#test").submit(function(event) {
-    event.preventDefault();
+function display(displayData) {
+  var dataAsString = displayData.toString();
 
-    console.log("hello");
+  $("#display").text(dataAsString);
+}
+
+$(document).ready(function() {
+  $("form#userInput").submit(function(event) {
+    event.preventDefault();
+    var numberEntered = $("input#entry").val();
+    var rawResults = beepBoop(numberEntered);
+    display(rawResults);
   });
 });
