@@ -24,7 +24,7 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 - [x] ** Expect: ** beepBoop(19) === "0, Boop!, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, Boop!, Boop!";
 
 #### Spec: Replace numbers containing a 0 with "Beep!":
-- [ ] ** Expect: ** beepBoop(27) === "Beep!, Boop!, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, Boop!, Boop!, Beep!, Boop!, 22, 23, I'm sorry, Dave. I'm afraid I can't do that., 25, 26, I'm sorry, Dave. I'm afraid I can't do that.";
+- [x] ** Expect: ** beepBoop(27) === "Beep!, Boop!, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, Boop!, Boop!, Beep!, Boop!, 22, 23, I'm sorry, Dave. I'm afraid I can't do that., 25, 26, I'm sorry, Dave. I'm afraid I can't do that.";
 
 
 ## Objectives

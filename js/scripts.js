@@ -1,5 +1,5 @@
 // BUSINESS LOGIC
-function returnedNumbers(numericalInput) {
+function returnNumbers(numericalInput) {
   var numbersZeroToInput = [];
   for (var count = 0; count <= numericalInput; count++) {
     numbersZeroToInput.push(count);
@@ -10,9 +10,7 @@ function returnedNumbers(numericalInput) {
 function moduloThree(numbersZeroToInput) {
   var numbersModuloThreeReplaced = [];
   numbersZeroToInput.forEach(function (number) {
-    if (number === 0) {
-      numbersModuloThreeReplaced.push("Boop!");
-    } else if (number % 3 === 0) {
+    if (number!== 0 && number % 3 === 0) {
       numbersModuloThreeReplaced.push("I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
       numbersModuloThreeReplaced.push(number);
@@ -49,16 +47,17 @@ function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
       numbersContainingZerosNowBeep.push(number);
     }
   });
+  debugger;
   return numbersContainingZerosNowBeep;
 };
 
 function beepBoop(numericalInput) {
-  var numbersZeroToInput = returnedNumbers(numericalInput);
-  var numbersModuloThreeReplaced = moduloThree(numbersZeroToInput);
-  var numbersContainingOnesNowBoop = replaceNumbersContainingOnes(numbersModuloThreeReplaced);
-  var numbersContainingZerosNowBeep = replaceNumbersContainingZeros(numbersContainingOnesNowBoop);
+  var numbersZeroToInput = returnNumbers(numericalInput);
+  var numbersDivisibleByThreeToDave = moduloThree(numbersZeroToInput);
+  var numbersWithOnesToBoop = replaceNumbersContainingOnes(numbersDivisibleByThreeToDave);
+  var numbersWithZerosToBeep = replaceNumbersContainingZeros(numbersWithOnesToBoop);
 
-  return numbersContainingOnesNowBoop;
+  return numbersWithZerosToBeep;
 };
 
 
