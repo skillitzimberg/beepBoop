@@ -4,7 +4,6 @@ function returnedNumbers(numericalInput) {
   for (var count = 0; count <= numericalInput; count++) {
     numbersZeroToInput.push(count);
   }
-
   return numbersZeroToInput;
 };
 
@@ -20,20 +19,43 @@ function moduloThree(numbersZeroToInput) {
   return numbersModuloThreeReplaced;
 };
 
-function replaceNumbersContainingOnes(numbersZeroToInput) {
+function replaceNumbersContainingOnes(numbersModuloThreeReplaced) {
+
   var numbersContainingOnesNowBoop = [];
 
-  numbersZeroToInput.forEach(function (number) {
+  numbersModuloThreeReplaced.forEach(function(number) {
     var numberAsString = number.toString();
 
-    for (var digit = 0; digit < numberAsString.length; digit++) {
-      if (parseInt(numberAsString.charAt(digit)) === 1) {
-        numbersContainingOnesNowBoop.push("Boop!");
-      } else {
-        numbersContainingOnesNowBoop.push(number);
-      }
+    if (numberAsString.includes("1") === true) {
+      numbersContainingOnesNowBoop.push("Boop!");
+    } else {
+      numbersContainingOnesNowBoop.push(number);
     }
   });
+  return numbersContainingOnesNowBoop;
+};
+
+function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
+
+  var numbersContainingZerosNowBeep = [];
+
+  numbersContainingOnesNowBoop.forEach(function(number) {
+    var numberAsString = number.toString();
+
+    if (numberAsString.includes("0") === true) {
+      numbersContainingZerosNowBeep.push("Beep!");
+    } else {
+      numbersContainingZerosNowBeep.push(number);
+    }
+  });
+  return numbersContainingZerosNowBeep;
+};
+
+function beepBoop(numericalInput) {
+  var numbersZeroToInput = returnedNumbers(numericalInput);
+  var numbersModuloThreeReplaced = moduloThree(numbersZeroToInput);
+  var numbersContainingOnesNowBoop = replaceNumbersContainingOnes(numbersModuloThreeReplaced);
+
   return numbersContainingOnesNowBoop;
 };
 
