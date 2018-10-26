@@ -74,14 +74,24 @@ function beepBoop(numericalInput) {
 
 //USER INTERFACE LOGIC
 
-function display(displayData) {
-  $("ol#display").empty();
-  for (var index = 0; index < displayData.length; index++) {
-    $("ol#display").append("<li>" + displayData[index] + "</li>");
-  };
-};
-
 $(document).ready(function() {
+  function display(displayData) {
+    $("ol#display").empty();
+    for (var index = 0; index < displayData.length; index++) {
+      $("ol#display").append("<li>" + displayData[index] + "</li>");
+    };
+  };
+
+  function getCheckboxValues(selections) {
+    var checkboxValues = [];
+    selections.each(function() {
+      var checkboxValue = $(this).val();
+      checkboxValues.push(checkboxValue);
+    });
+    console.log(checkboxValues);
+    return checkboxValues;
+  };
+
   $("form#userInput").submit(function(event) {
     event.preventDefault();
     var numberEntered = $("input#entry").val();
@@ -89,30 +99,11 @@ $(document).ready(function() {
     display(rawResults);
   });
 
-  function getCheckboxValues() {
-    var checkboxValues = [];
-      $("input:checkbox[name=userChoices]:checked").each(function() {
-        var checkboxValue = $(this).val();
-        checkboxValues.push(checkboxValue);
-      });
-      return checkboxValues;
-  };
+  $("form#userChoices").submit(function(event) {
+    event.preventDefault();
+    var selections = getCheckboxValues($("input:checkbox[name=choices]:checked"));
+    console.log(selections);
+  });
 
-  function displayCheckboxValues(checkedBoxesArray) {
-    $("#results").text(checkedBoxesArray);
-      console.log('got here');
-      console.log('checkedBoxesArray');
-      debugger;
-    $(".displayResults").toggle();
-  };
-
-    $("form#surveyForm").submit(function(event) {
-      event.preventDefault();
-
-      var surveyValues = getCheckboxValues();
-      // console.log(surveyValues);
-      displayCheckboxValues(surveyValues);
-
-    });
 
 });
