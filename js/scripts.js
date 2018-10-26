@@ -75,10 +75,11 @@ function beepBoop(numericalInput) {
 //USER INTERFACE LOGIC
 
 function display(displayData) {
-  var dataAsString = displayData.toString();
-
-  $("#display").text(dataAsString);
-}
+  $("ol#display").empty();
+  for (var index = 0; index < displayData.length; index++) {
+    $("ol#display").append("<li>" + displayData[index] + "</li>");
+  };
+};
 
 $(document).ready(function() {
   $("form#userInput").submit(function(event) {

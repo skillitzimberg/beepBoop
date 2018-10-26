@@ -41,7 +41,7 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 
 - [ ] Project is in a presentable, portfolio-quality state.
 
-- [ ] Required functionality is in place by Friday deadline.
+- [x] Required functionality is in place by Friday deadline.
 
 - [ ] Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
