@@ -6,24 +6,26 @@
 
 ## Description
 Given a numeric input the program returns a range of numbers from 0 to the inputted number with the following exceptions in order of importance:
-1 Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."
-2 Numbers that contain a 1 are replaced (all digits) with "Boop!"
-3 Numbers that contain a 0 are replaced (all digits) with "Beep!"
+1. Numbers divisible by 3 are replaced with "I'm sorry, Dave. I'm afraid I can't do that."
+
+2. Numbers that contain a 1 are replaced (all digits) with "Boop!"
+
+3. Numbers that contain a 0 are replaced (all digits) with "Beep!"
 
 ### Specifications:
-#### Spec: Return user input:
+##### Spec: Return user input:
 - [x] ** Expect: ** beepBoop(19) === "19";
 
-#### Spec: Return all integers from 0 up to and including the user input:
+##### Spec: Return all integers from 0 up to and including the user input:
 - [x] ** Expect: ** beepBoop(19) === "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ,17 ,18, 19";
 
-#### Spec: Replace numbers divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that.":
+##### Spec: Replace numbers divisible by 3 with "I'm sorry, Dave. I'm afraid I can't do that.":
 - [x] ** Expect: ** beepBoop(9) === "0, 1, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that.";
 
-#### Spec: Replace numbers containing a 1 with "Boop!":
+##### Spec: Replace numbers containing a 1 with "Boop!":
 - [x] ** Expect: ** beepBoop(19) === "0, Boop!, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, Boop!, Boop!";
 
-#### Spec: Replace numbers containing a 0 with "Beep!":
+##### Spec: Replace numbers containing a 0 with "Beep!":
 - [x] ** Expect: ** beepBoop(27) === "Beep!, Boop!, 2, I'm sorry, Dave. I'm afraid I can't do that., 4, 5, I'm sorry, Dave. I'm afraid I can't do that., 7, 8, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, I'm sorry, Dave. I'm afraid I can't do that., Boop!, Boop!, Boop!, Boop!, Beep!, Boop!, 22, 23, I'm sorry, Dave. I'm afraid I can't do that., 25, 26, I'm sorry, Dave. I'm afraid I can't do that.";
 
 
@@ -48,12 +50,11 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 - [x] Application implements a loop and works as expected.
 
 ## Setup/Installation Requirements
-View the project at (GitHub Pages)[].
+View the project at [GitHub Pages]().
 
 View the code at [GitHub](https://github.com/skillitzimberg/beepBoop).
 
 ## Known Bugs
-replaceNumbersContainingZeros(numbersContainingOnesNowBoop) not working.
 
 
 ## Support and contact details
