@@ -1,6 +1,11 @@
 // BUSINESS LOGIC
 function beepBoop(numericalInput) {
-  return numericalInput;
+  var numbersZeroToInput = [];
+  for (var count = 0; count <= numericalInput; count++) {
+    numbersZeroToInput.push(count);
+  }
+
+  return numbersZeroToInput;
 }
 
 
