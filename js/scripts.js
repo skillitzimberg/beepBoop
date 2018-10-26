@@ -88,7 +88,6 @@ $(document).ready(function() {
       var checkboxValue = $(this).val();
       checkboxValues.push(checkboxValue);
     });
-    console.log(checkboxValues);
     return checkboxValues;
   };
 
@@ -102,7 +101,9 @@ $(document).ready(function() {
   $("form#userChoices").submit(function(event) {
     event.preventDefault();
     var selections = getCheckboxValues($("input:checkbox[name=choices]:checked"));
-    console.log(selections);
+    $("form#userInput").removeClass("hide");
+    $("input#addName").removeClass("hide");
+    $("form#userChoices").addClass("hide");
   });
 
 
