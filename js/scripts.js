@@ -10,7 +10,9 @@ function returnedNumbers(numericalInput) {
 function moduloThree(numbersZeroToInput) {
   var numbersModuloThreeReplaced = [];
   numbersZeroToInput.forEach(function (number) {
-    if (number % 3 === 0) {
+    if (number === 0) {
+      numbersModuloThreeReplaced.push("Boop!");
+    } else if (number % 3 === 0) {
       numbersModuloThreeReplaced.push("I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
       numbersModuloThreeReplaced.push(number);
@@ -36,7 +38,6 @@ function replaceNumbersContainingOnes(numbersModuloThreeReplaced) {
 };
 
 function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
-
   var numbersContainingZerosNowBeep = [];
 
   numbersContainingOnesNowBoop.forEach(function(number) {
@@ -55,6 +56,7 @@ function beepBoop(numericalInput) {
   var numbersZeroToInput = returnedNumbers(numericalInput);
   var numbersModuloThreeReplaced = moduloThree(numbersZeroToInput);
   var numbersContainingOnesNowBoop = replaceNumbersContainingOnes(numbersModuloThreeReplaced);
+  var numbersContainingZerosNowBeep = replaceNumbersContainingZeros(numbersContainingOnesNowBoop);
 
   return numbersContainingOnesNowBoop;
 };
