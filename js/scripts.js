@@ -18,23 +18,23 @@ function returnNumbers(numericalInput) {
 };
 
 
-function moduloThree(numbersZeroToInput) {
-  var numbersModuloThreeReplaced = [];
-  numbersZeroToInput.forEach(function (number) {
-    if (number!== 0 && number % 3 === 0) {
-      numbersModuloThreeReplaced.push("I'm sorry, Dave. I'm afraid I can't do that.");
+function replaceNumbersUsingModuloAsFilter(numbersZeroToInput) {
+  var numbersMatchingModuloRuleReplaced = [];
+  for (var index = 0; index < numbersZeroToInput.length; index++) {
+    if (numbersZeroToInput[index] !== 0 && numbersZeroToInput[index] % 3 === 0) {
+      numbersMatchingModuloRuleReplaced.push("I'm sorry, Dave. I'm afraid I can't do that.");
     } else {
-      numbersModuloThreeReplaced.push(number);
+      numbersMatchingModuloRuleReplaced.push(numbersZeroToInput[index]);
     }
-  });
-  return numbersModuloThreeReplaced;
+  }
+  return numbersMatchingModuloRuleReplaced;
 };
 
 
 
-function replaceNumbersContainingOnes(numbersModuloThreeReplaced) {
+function replaceNumbersContainingOnes(numbersMatchingModuloRuleReplaced) {
   var numbersContainingOnesNowBoop = [];
-  numbersModuloThreeReplaced.forEach(function(number) {
+  numbersMatchingModuloRuleReplaced.forEach(function(number) {
     var numberAsString = number.toString();
     if (numberAsString.includes("1") === true) {
       numbersContainingOnesNowBoop.push("Boop!");
@@ -64,7 +64,7 @@ function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
 
 function beepBoop(numericalInput) {
   var numbersZeroToInput = returnNumbers(numericalInput);
-  var numbersDivisibleByThreeToDave = moduloThree(numbersZeroToInput);
+  var numbersDivisibleByThreeToDave = replaceNumbersUsingModuloAsFilter(numbersZeroToInput);
   var numbersWithOnesToBoop = replaceNumbersContainingOnes(numbersDivisibleByThreeToDave);
   var numbersWithZerosToBeep = replaceNumbersContainingZeros(numbersWithOnesToBoop);
 
