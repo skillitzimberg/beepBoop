@@ -34,12 +34,12 @@ function replaceNumbersUsingModuloAsFilter(numbersZeroToInput) {
 
 function replaceNumbersContainingOnes(numbersMatchingModuloRuleReplaced) {
   var numbersContainingOnesNowBoop = [];
-  numbersMatchingModuloRuleReplaced.forEach(function(number) {
-    var numberAsString = number.toString();
-    if (numberAsString.includes("1") === true) {
+  numbersMatchingModuloRuleReplaced.forEach(function(element) {
+    var elementAsString = element.toString();
+    if (elementAsString.includes("1") === true) {
       numbersContainingOnesNowBoop.push("Boop!");
     } else {
-      numbersContainingOnesNowBoop.push(number);
+      numbersContainingOnesNowBoop.push(element);
     }
   });
   return numbersContainingOnesNowBoop;
