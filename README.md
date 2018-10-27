@@ -50,8 +50,6 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 - [x] Application implements a loop and works as expected.
 
 ## Setup/Installation Requirements
-View the project at [GitHub Pages]().
-
 View the code at [GitHub](https://github.com/skillitzimberg/beepBoop).
 
 ## Known Bugs
