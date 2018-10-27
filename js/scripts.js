@@ -6,7 +6,7 @@ function returnNumbers(numericalInput) {
 
   if (numericalInput < 0) {
     iterateUpOrDown = -1;
-  } else if (numericalInput >= 0) {
+  } else {
     iterateUpOrDown = 1;
   };
 
