@@ -1,12 +1,15 @@
 // BUSINESS LOGIC
 
 function returnNumbers(numericalInput) {
+  console.log(numericalInput);
   var numbersZeroToInput = [];
   var iterateUpOrDown;
 
   if (numericalInput < 0) {
+    console.log(numericalInput);
     iterateUpOrDown = -1;
-  } else if (numericalInput > 0) {
+  } else if (numericalInput >= 0) {
+    console.log(numericalInput);
     iterateUpOrDown = 1;
   };
 
@@ -85,7 +88,7 @@ function display(displayData) {
 $(document).ready(function() {
   $("form#userInput").submit(function(event) {
     event.preventDefault();
-    var numberEntered = $("input#entry").val();
+    var numberEntered = parseInt($("input#entry").val());
     var rawResults = beepBoop(numberEntered);
     display(rawResults);
   });
