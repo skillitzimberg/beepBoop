@@ -35,17 +35,12 @@ function replaceNumbersContainingOnes(element) {
 };
 
 
-function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
-  var numbersContainingZerosNowBeep = [];
-  numbersContainingOnesNowBoop.forEach(function(number) {
-    var numberAsString = number.toString();
-    if (numberAsString.includes("0") === true) {
-      numbersContainingZerosNowBeep.push("Beep!");
-    } else {
-      numbersContainingZerosNowBeep.push(number);
+function replaceNumbersContainingZeros(element) {
+  var elementAsString = element.toString();
+    if (elementAsString.includes("0") === true) {
+      element = "Beep!";
     }
-  });
-  return numbersContainingZerosNowBeep;
+  return element;
 };
 
 
