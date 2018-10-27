@@ -62,18 +62,27 @@ function beepBoop(numericalInput) {
 
 //USER INTERFACE LOGIC
 
-function display(displayData) {
+function display(displayData, numberEntered) {
   $("ol#display").empty();
+
+  console.log(numberEntered);
+  if (numberEntered < 0) {
+    $("ol#display").attr("reversed", true);
+  } else {
+    $("ol#display").removeAttr("reversed");
+  }
   for (var index = 0; index < displayData.length; index++) {
     $("ol#display").append("<li>" + displayData[index] + "</li>");
   };
 };
+
+ // reversed="true"
 
 $(document).ready(function() {
   $("form#userInput").submit(function(event) {
     event.preventDefault();
     var numberEntered = parseInt($("input#entry").val());
     var rawResults = beepBoop(numberEntered);
-    display(rawResults);
+    display(rawResults, numberEntered);
   });
 });
