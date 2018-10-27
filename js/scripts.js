@@ -18,7 +18,6 @@ function returnNumbers(numericalInput) {
 };
 
 
-
 function moduloThree(numbersZeroToInput) {
   var numbersModuloThreeReplaced = [];
   numbersZeroToInput.forEach(function (number) {
