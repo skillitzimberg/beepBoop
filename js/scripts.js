@@ -2,16 +2,19 @@
 
 function returnNumbers(numericalInput) {
   var numbersZeroToInput = [];
+  var iterateUpOrDown;
+
   if (numericalInput < 0) {
-    for (var count = 0; count >= numericalInput; count--) {
-      numbersZeroToInput.push(count);
-    }
-  } else {
-    for (var count = 0; count <= numericalInput; count++) {
-      numbersZeroToInput.push(count);
-    }
-  }
-  return numbersZeroToInput;
+    iterateUpOrDown = -1;
+  } else if (numericalInput > 0) {
+    iterateUpOrDown = 1;
+  };
+  
+  for (var count = 0; count <= Math.abs(numericalInput); count++) {
+    var numberToPush = count*iterateUpOrDown;
+    numbersZeroToInput.push(numberToPush);
+  };
+  console.log(numbersZeroToInput);
 };
 
 
