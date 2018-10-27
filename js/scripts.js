@@ -1,15 +1,12 @@
 // BUSINESS LOGIC
 
 function returnNumbers(numericalInput) {
-  console.log(numericalInput);
   var numbersZeroToInput = [];
   var iterateUpOrDown;
 
   if (numericalInput < 0) {
-    console.log(numericalInput);
     iterateUpOrDown = -1;
   } else if (numericalInput >= 0) {
-    console.log(numericalInput);
     iterateUpOrDown = 1;
   };
 
@@ -32,7 +29,6 @@ function replaceNumbersUsingModuloAsFilter(numbersZeroToInput) {
   }
   return numbersMatchingModuloRuleReplaced;
 };
-
 
 
 function replaceNumbersContainingOnes(numbersMatchingModuloRuleReplaced) {
