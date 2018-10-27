@@ -1,6 +1,7 @@
+
 // BUSINESS LOGIC
 
-function returnNumbers(numericalInput) {
+function returnNUmbersZeroToUserInput(numericalInput) {
   var numbersZeroToInput = [];
   var iterateUpOrDown;
 
@@ -45,24 +46,18 @@ function replaceNumbersContainingZeros(element) {
 
 
 function beepBoop(numericalInput) {
-  var numbersZeroToInput = returnNumbers(numericalInput);
   var allElementsProcessed = [];
+  var numbersZeroToInput = returnNUmbersZeroToUserInput(numericalInput);
 
-  for (var index = 0; index <= numbersZeroToInput.length; index++) {
+  for (var index = 0; index < numbersZeroToInput.length; index++) {
     var element = numbersZeroToInput[index];
     element = replaceNumbersUsingModuloAsFilter(element);
     element = replaceNumbersContainingOnes(element);
-    element = replaceNumbersContainingZeros(element)
+    element = replaceNumbersContainingZeros(element);
     allElementsProcessed.push(element);
   }
   return allElementsProcessed;
 };
-
-//
-// allElementsProcessed.push(replaceNumbersUsingModuloAsFilter(element));
-// allElementsProcessed.push(replaceNumbersContainingOnes(element));
-// allElementsProcessed.push(replaceNumbersContainingZeros(element));
-
 
 
 //USER INTERFACE LOGIC
