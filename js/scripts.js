@@ -9,12 +9,12 @@ function returnNumbers(numericalInput) {
   } else if (numericalInput > 0) {
     iterateUpOrDown = 1;
   };
-  
+
   for (var count = 0; count <= Math.abs(numericalInput); count++) {
     var numberToPush = count*iterateUpOrDown;
     numbersZeroToInput.push(numberToPush);
   };
-  console.log(numbersZeroToInput);
+  return numbersZeroToInput;
 };
 
 
