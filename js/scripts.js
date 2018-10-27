@@ -1,7 +1,7 @@
 
 // BUSINESS LOGIC
 
-function returnNUmbersZeroToUserInput(numericalInput) {
+function returnNumbersZeroToUserInput(numericalInput) {
   var numbersZeroToInput = [];
   var iterateUpOrDown;
 
@@ -19,27 +19,18 @@ function returnNUmbersZeroToUserInput(numericalInput) {
 };
 
 
-function replaceNumbersUsingModuloAsFilter(element) {
-    if (element !== 0 && element % 3 === 0) {
-      element = "I'm sorry, Dave. I'm afraid I can't do that.";
+function replaceNumbersUsingModuloAsFilterWithPhrase(element, moduloValue, phrase) {
+    if (element !== 0 && element % moduloValue === 0) {
+      element = phrase;
     }
   return element;
 };
 
 
-function replaceNumbersContainingOnes(element) {
+function replaceNumbersContainingGivenDigitWithPhrase(element, digit, phrase) {
     var elementAsString = element.toString();
-    if (elementAsString.includes("1") === true) {
-      element = "Boop!";
-    }
-  return element;
-};
-
-
-function replaceNumbersContainingZeros(element) {
-  var elementAsString = element.toString();
-    if (elementAsString.includes("0") === true) {
-      element = "Beep!";
+    if (elementAsString.includes(digit) === true) {
+      element = phrase;
     }
   return element;
 };
@@ -47,13 +38,13 @@ function replaceNumbersContainingZeros(element) {
 
 function beepBoop(numericalInput) {
   var allElementsProcessed = [];
-  var numbersZeroToInput = returnNUmbersZeroToUserInput(numericalInput);
+  var numbersZeroToInput = returnNumbersZeroToUserInput(numericalInput);
 
   for (var index = 0; index < numbersZeroToInput.length; index++) {
     var element = numbersZeroToInput[index];
-    element = replaceNumbersUsingModuloAsFilter(element);
-    element = replaceNumbersContainingOnes(element);
-    element = replaceNumbersContainingZeros(element);
+    element = replaceNumbersUsingModuloAsFilterWithPhrase(element, 3, "I'm sorry, Dave. I'm afraid I can't do that.");
+    element = replaceNumbersContainingGivenDigitWithPhrase(element, 1, "Boop!");
+    element = replaceNumbersContainingGivenDigitWithPhrase(element, 0, "Beep!");
     allElementsProcessed.push(element);
   }
   return allElementsProcessed;
@@ -65,12 +56,12 @@ function beepBoop(numericalInput) {
 function display(displayData, numberEntered) {
   $("ol#display").empty();
 
-  console.log(numberEntered);
   if (numberEntered < 0) {
     $("ol#display").attr("reversed", true);
   } else {
     $("ol#display").removeAttr("reversed");
   }
+
   for (var index = 0; index < displayData.length; index++) {
     $("ol#display").append("<li>" + displayData[index] + "</li>");
   };
