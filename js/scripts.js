@@ -45,7 +45,6 @@ function replaceNumbersContainingOnes(numbersMatchingModuloRuleReplaced) {
 };
 
 
-
 function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
   var numbersContainingZerosNowBeep = [];
   numbersContainingOnesNowBoop.forEach(function(number) {
@@ -58,7 +57,6 @@ function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
   });
   return numbersContainingZerosNowBeep;
 };
-
 
 
 function beepBoop(numericalInput) {
