@@ -18,30 +18,20 @@ function returnNumbers(numericalInput) {
 };
 
 
-function replaceNumbersUsingModuloAsFilter(numbersZeroToInput) {
-  var numbersMatchingModuloRuleReplaced = [];
-  for (var index = 0; index < numbersZeroToInput.length; index++) {
-    if (numbersZeroToInput[index] !== 0 && numbersZeroToInput[index] % 3 === 0) {
-      numbersMatchingModuloRuleReplaced.push("I'm sorry, Dave. I'm afraid I can't do that.");
-    } else {
-      numbersMatchingModuloRuleReplaced.push(numbersZeroToInput[index]);
+function replaceNumbersUsingModuloAsFilter(element) {
+    if (element !== 0 && element % 3 === 0) {
+      element = "I'm sorry, Dave. I'm afraid I can't do that.";
     }
-  }
-  return numbersMatchingModuloRuleReplaced;
+  return element;
 };
 
 
-function replaceNumbersContainingOnes(numbersMatchingModuloRuleReplaced) {
-  var numbersContainingOnesNowBoop = [];
-  numbersMatchingModuloRuleReplaced.forEach(function(element) {
+function replaceNumbersContainingOnes(element) {
     var elementAsString = element.toString();
     if (elementAsString.includes("1") === true) {
-      numbersContainingOnesNowBoop.push("Boop!");
-    } else {
-      numbersContainingOnesNowBoop.push(element);
+      element = "Boop!";
     }
-  });
-  return numbersContainingOnesNowBoop;
+  return element;
 };
 
 
@@ -61,12 +51,22 @@ function replaceNumbersContainingZeros(numbersContainingOnesNowBoop) {
 
 function beepBoop(numericalInput) {
   var numbersZeroToInput = returnNumbers(numericalInput);
-  var numbersDivisibleByThreeToDave = replaceNumbersUsingModuloAsFilter(numbersZeroToInput);
-  var numbersWithOnesToBoop = replaceNumbersContainingOnes(numbersDivisibleByThreeToDave);
-  var numbersWithZerosToBeep = replaceNumbersContainingZeros(numbersWithOnesToBoop);
+  var allElementsProcessed = [];
 
-  return numbersWithZerosToBeep;
+  for (var index = 0; index <= numbersZeroToInput.length; index++) {
+    var element = numbersZeroToInput[index];
+    element = replaceNumbersUsingModuloAsFilter(element);
+    element = replaceNumbersContainingOnes(element);
+    element = replaceNumbersContainingZeros(element)
+    allElementsProcessed.push(element);
+  }
+  return allElementsProcessed;
 };
+
+//
+// allElementsProcessed.push(replaceNumbersUsingModuloAsFilter(element));
+// allElementsProcessed.push(replaceNumbersContainingOnes(element));
+// allElementsProcessed.push(replaceNumbersContainingZeros(element));
 
 
 
