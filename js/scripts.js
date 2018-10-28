@@ -1,18 +1,18 @@
 
 // BUSINESS LOGIC
 
-function returnNumbersZeroToUserInput(numericalInput, ifConditionValue, iterationValue) {
+function returnNumbersZeroToUserInput(numericalInput, ifLessThanConditionValue, iterationValue) {
   var numbersZeroToInput = [];
-  var iterateUpOrDown;
+  var countUpOrDown;
 
-  if (numericalInput < ifConditionValue) {
-    iterateUpOrDown = -iterationValue;
+  if (numericalInput < ifLessThanConditionValue) {
+    countUpOrDown = -iterationValue;
   } else {
-    iterateUpOrDown = iterationValue;
+    countUpOrDown = iterationValue;
   };
 
-  for (var count = 0; count <= Math.abs(numericalInput); count++) {
-    var numberToPush = count*iterateUpOrDown;
+  for (var count = ifLessThanConditionValue; count <= Math.abs(numericalInput); count += iterationValue) {
+    var numberToPush = count*countUpOrDown;
     numbersZeroToInput.push(numberToPush);
   };
   return numbersZeroToInput;
@@ -47,23 +47,17 @@ function beepBoop(numericalInput) {
     element = replaceNumbersContainingDigitWithPhrase(element, 0, "Beep!");
     allElementsProcessed.push(element);
   }
-  return allElementsProcessed;
+  return [numbersZeroToInput, allElementsProcessed];
 };
 
 
 //USER INTERFACE LOGIC
 
 function display(displayData, numberEntered) {
-  $("ol#display").empty();
+  $("ul#display").empty();
 
-  if (numberEntered < 0) {
-    $("ol#display").attr("reversed", true);
-  } else {
-    $("ol#display").removeAttr("reversed");
-  }
-
-  for (var index = 0; index < displayData.length; index++) {
-    $("ol#display").append("<li>" + displayData[index] + "</li>");
+  for (var count = 0; count < displayData[0].length; count++) {
+    $("ul#display").append("<li><span>" + displayData[0][count] + ". </span>" + displayData[1][count] + "</li>");
   };
 };
 

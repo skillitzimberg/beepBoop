@@ -3,7 +3,7 @@ body {
   font-size: 18px;
   font-family: monospace;
   margin: 0;
-  padding: 0;
+  padding: 0 0 4em;
   color #333;
 }
 
@@ -26,4 +26,12 @@ header h1 {
 
 #display {
   margin-top: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  text-align: center;
 }
