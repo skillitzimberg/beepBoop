@@ -56,9 +56,9 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 - [x] Application implements a loop and works as expected.
 
 ## Setup/Installation Requirements
-To view or clone the code, go to [GitHub](https://github.com/skillitzimberg/beepBoop). This version is a slightly refactored from what was submitted on Friday. There is an extra IF statement and a forEach loop was refactored to a traditional FOR loop.
+To view or clone the code, go to [GitHub](https://github.com/skillitzimberg/beepBoop).
 
-View the program in its current state at [GitHub Pages](https://skillitzimberg.github.io/beepBoop/). This is a far more refactored and DRY version than was submitted on Friday. It has fewer functions and more functionality.
+View the program in its current state at [GitHub Pages](https://skillitzimberg.github.io/beepBoop/).
 
 ## Known Bugs
 
