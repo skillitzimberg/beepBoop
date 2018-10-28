@@ -1,14 +1,14 @@
 
 // BUSINESS LOGIC
 
-function returnNumbersZeroToUserInput(numericalInput) {
+function returnNumbersZeroToUserInput(numericalInput, ifConditionValue, iterationValue) {
   var numbersZeroToInput = [];
   var iterateUpOrDown;
 
-  if (numericalInput < 0) {
-    iterateUpOrDown = -1;
+  if (numericalInput < ifConditionValue) {
+    iterateUpOrDown = -iterationValue;
   } else {
-    iterateUpOrDown = 1;
+    iterateUpOrDown = iterationValue;
   };
 
   for (var count = 0; count <= Math.abs(numericalInput); count++) {
@@ -27,7 +27,7 @@ function replaceNumbersUsingModuloAsFilterWithPhrase(element, moduloValue, phras
 };
 
 
-function replaceNumbersContainingGivenDigitWithPhrase(element, digit, phrase) {
+function replaceNumbersContainingDigitWithPhrase(element, digit, phrase) {
     var elementAsString = element.toString();
     if (elementAsString.includes(digit) === true) {
       element = phrase;
@@ -38,13 +38,13 @@ function replaceNumbersContainingGivenDigitWithPhrase(element, digit, phrase) {
 
 function beepBoop(numericalInput) {
   var allElementsProcessed = [];
-  var numbersZeroToInput = returnNumbersZeroToUserInput(numericalInput);
+  var numbersZeroToInput = returnNumbersZeroToUserInput(numericalInput, 0, 1);
 
   for (var index = 0; index < numbersZeroToInput.length; index++) {
     var element = numbersZeroToInput[index];
     element = replaceNumbersUsingModuloAsFilterWithPhrase(element, 3, "I'm sorry, Dave. I'm afraid I can't do that.");
-    element = replaceNumbersContainingGivenDigitWithPhrase(element, 1, "Boop!");
-    element = replaceNumbersContainingGivenDigitWithPhrase(element, 0, "Beep!");
+    element = replaceNumbersContainingDigitWithPhrase(element, 1, "Boop!");
+    element = replaceNumbersContainingDigitWithPhrase(element, 0, "Beep!");
     allElementsProcessed.push(element);
   }
   return allElementsProcessed;
@@ -67,7 +67,6 @@ function display(displayData, numberEntered) {
   };
 };
 
- // reversed="true"
 
 $(document).ready(function() {
   $("form#userInput").submit(function(event) {
