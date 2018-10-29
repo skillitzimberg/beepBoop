@@ -58,10 +58,10 @@ Given a numeric input the program returns a range of numbers from 0 to the input
 ## Setup/Installation Requirements
 To view or clone the code, go to [GitHub](https://github.com/skillitzimberg/beepBoop).
 
-View the program in its current state at [GitHub Pages](https://skillitzimberg.github.io/beepBoop/).
+Use the program online go to [GitHub Pages](https://skillitzimberg.github.io/beepBoop/).
 
 ## Known Bugs
-
+returnNumbersZeroToUserInput(numericalInput, ifLessThanConditionValue, iterationValue) has odd behaviors for values other than 0 & 1 for ifLessThanConditionValue & iterationValue, respectively. It's not counting the way I was expecting in those situations.
 
 ## Support and contact details
 
